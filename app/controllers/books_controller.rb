@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
+  # GET / or GET /books
   def index
-    @books = Book.all
+    @books = Book.order('rate DESC, id ASC')
   end
 
   # POST /books
