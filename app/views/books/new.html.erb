@@ -1,0 +1,4 @@
+<%= form_for(@book) do |f| %>
+    <label>タイトル：<%= f.text_field :title %></label>
+    <%= f.submit '新しい本を追加' %>
+<% end %>

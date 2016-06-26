@@ -1,0 +1,6 @@
+<%= link_to '本を追加', :action => 'new' %>
+<ul>
+  <% @books.each do |book| %>
+      <li><%= book.title %>:<%= book.rate %></li>
+  <% end %>
+</ul>
