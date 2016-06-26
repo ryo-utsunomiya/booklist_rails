@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
 
     if @book.save
-      redirect_to @book, notice: '本を登録しました。'
+      redirect :books_url
     else
       render :new
     end
