@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
 
     if @book.save
-      redirect :books_url
+      redirect_to :books_url
     else
       render :new
     end
