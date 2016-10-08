@@ -41,6 +41,15 @@ class BooksController < ApplicationController
     end
   end
 
+  # POST /books/:id/plus_rate
+  def plus_rate
+    @book = Book.find(params[:id])
+    @book.rate += 1
+    @book.save
+
+    redirect_to :action => :index
+  end
+
   private
 
   def book_params
