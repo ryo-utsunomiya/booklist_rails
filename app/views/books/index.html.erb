@@ -4,6 +4,7 @@
       <li>
         <%= book.title %>:<%= book.rate %>
         <%= button_to '+', {:action => :plus_rate, :id => book.id}, :form_class => 'rate-button' %>
+        <%= button_to 'x', {:action => :destroy, :id => book.id,}, :method => :delete, :form_class => 'delete-button' %>
       </li>
   <% end %>
 </ul>

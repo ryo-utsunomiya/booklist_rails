@@ -41,6 +41,12 @@ class BooksController < ApplicationController
     end
   end
 
+  # DELETE /books/:id
+  def destroy
+    Book.find(params[:id]).destroy
+    redirect_to books_url
+  end
+
   # POST /books/:id/plus_rate
   def plus_rate
     @book = Book.find(params[:id])
